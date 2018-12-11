@@ -5,6 +5,7 @@ const consign = require('consign')
 app.db = db
 
 consign()
+    .include('./config/passport.js')
     .then('./config/middlewares.js')
     .then('./api')
     .then('./config/routes.js')
